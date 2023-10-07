@@ -37,12 +37,13 @@ body {
 .h2 {
   margin-top: -15px;
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   color: #003c08;
 }
 
 .year {
+  font-size: 21px;
   color: #00ff0c;
 }
 
