@@ -57,7 +57,7 @@ const getCoords = (elem) => {
   };
 }
 
- /*Основной механизм DnD*/ 
+ /*Основной механизм DnD*/
 // Этап 1. Вешаем обработчик на mousedown
 component.addEventListener('mousedown', (e) => {
   // Этап 2. Вычисляем начальные координаты положения элемента
@@ -92,3 +92,5 @@ component.addEventListener('mousedown', (e) => {
   // Когда отпускаем мышь - все удаляем
   document.addEventListener('mouseup', theEnd);
 });
+
+
