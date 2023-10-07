@@ -170,7 +170,7 @@ input, [type="submit"] {
 
 input:focus, button:focus, [type="checkbox"]:focus + label .tick {
   outline: none;
-  ox-shadow: 0 0 0 0.125rem #2a7fff;
+  box-shadow: 0 0 0 0.125rem #04ff1a;
 }
 
 [tabindex="-1"]:focus {
