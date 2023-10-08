@@ -40,7 +40,7 @@
     <label for="add" class="vh">
       Write a new todo item
     </label>
-    <input type="text" id="add" v-model="workingName" placeholder="Write a case" :aria-invalid="validity">
+    <input type="text" id="add" v-model="workingName" placeholder="Write a case":aria-invalid="validity" autocomplete="off"><!--Добавление autocomplete="off" в элемент ввода должно помешать браузеру отображать последние дополнения к списку дел при нажатии на поле ввода-->
     <button type="submit" :disabled="validity">Add</button>
   </form>
   <div role="status" class="vh">
@@ -53,3 +53,61 @@
 </footer>
 </body>
 </html>
+
+
+<!--<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue 2 Todo App</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+    <div id="app">
+        <h1>Vue 2 Todo App</h1>
+
+        !-- Input field to add todos --
+        <div>
+            <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new todo">
+            <button @click="addTodo">Add Todo</button>
+        </div>
+
+        !-- Display todos --
+        <ul>
+            <li v-for="(todo, index) in todos" :key="index">
+            {{ todo }}
+            <button @click="deleteTodo(index)">Delete</button>
+            </li>
+        </ul>
+
+        !-- Button to delete all todos --
+        <button @click="deleteAllTodos">Delete All Todos</button>
+    </div>
+
+    <script>
+    new Vue({
+    el: '#app',
+    data: {
+        newTodo: '',
+        todos: []
+    },
+    methods: {
+        addTodo: function() {
+        if (this.newTodo.trim() !== '') {
+            this.todos.push(this.newTodo);
+            this.newTodo = ''; // Clear input field after adding todo
+        }
+        },
+        deleteTodo: function(index) {
+        this.todos.splice(index, 1);
+        },
+        deleteAllTodos: function() {
+        this.todos = [];
+        }
+    }
+    });
+    </script>
+
+    </body>
+    </html>-->
